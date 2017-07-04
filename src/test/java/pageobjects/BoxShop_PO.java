@@ -103,11 +103,14 @@ return boxittab.isDisplayed();
 		executor.executeScript("arguments[0].click();", element);
 	}
 	
-	
+	/**
+	 * Click Checkout button
+	 */
 	public static void clickCheckout(){
 		WebElement element = driver.findElement(By.xpath("//a[@class='btn main-shop-submit'][1]"));
 		JavascriptExecutor executor = (JavascriptExecutor)driver;
 		executor.executeScript("arguments[0].click();", element);
+		
 	}
 
 }
