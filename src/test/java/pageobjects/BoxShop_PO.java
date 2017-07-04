@@ -109,7 +109,9 @@ return boxittab.isDisplayed();
 	public static void clickCheckout(){
 		WebElement element = driver.findElement(By.xpath("//a[@class='btn main-shop-submit'][1]"));
 		JavascriptExecutor executor = (JavascriptExecutor)driver;
+		//click on checkout button
 		executor.executeScript("arguments[0].click();", element);
+		
 		
 	}
 
