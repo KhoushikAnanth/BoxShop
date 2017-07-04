@@ -95,6 +95,10 @@ public class BoxShop_Steps {
 
 	@Then("^I should see the item been removed from cart$")
 	public void i_should_see_the_item_been_removed_from_cart() throws Throwable {
+		PageFactory.initElements(driver, BoxShop_PO.class);
+		int itemQuantity = Integer.parseInt(BoxShop_PO.getItemsInCart());
+		//Assert.assertEquals(itemQuantity = 0);
+		
 	}
 	@When("^I click on CheckOut$")
 	public void i_click_on_CheckOut() throws Throwable {
@@ -105,5 +109,10 @@ public class BoxShop_Steps {
 	@Then("^I Checkout button should'nt be available\\.$")
 	public void i_Checkout_button_should_nt_be_available() throws Throwable {
 	}
+	@Then("^I should be directed to DetailsPage$")
+	public void i_should_be_directed_to_DetailsPage() throws Throwable {
+	   
+	}
+	
 }
 

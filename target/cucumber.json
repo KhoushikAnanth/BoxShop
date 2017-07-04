@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 14872440316,
+              "duration": 15410718257,
               "status": "passed"
             },
             "match": {
@@ -14,14 +14,14 @@
             }
           }
         ],
-        "line": 32,
-        "name": "I should only be able to checkout only when at least one item in cart.",
+        "line": 38,
+        "name": "When I add all the products to cart i should be directed to Details page",
         "description": "",
-        "id": "box-shop-cart--tests;i-should-only-be-able-to-checkout-only-when-at-least-one-item-in-cart.",
+        "id": "box-shop-cart--tests;when-i-add-all-the-products-to-cart-i-should-be-directed-to-details-page",
         "after": [
           {
             "result": {
-              "duration": 128860,
+              "duration": 131712,
               "status": "passed"
             },
             "match": {
@@ -34,10 +34,10 @@
         "steps": [
           {
             "result": {
-              "duration": 262234082,
+              "duration": 308521350,
               "status": "passed"
             },
-            "line": 33,
+            "line": 39,
             "name": "I am on the Box Shop page",
             "match": {
               "location": "BoxShop_Steps.i_am_on_the_Box_Shop_page()"
@@ -46,33 +46,60 @@
           },
           {
             "result": {
-              "duration": 121736428,
+              "duration": 220133650,
               "status": "passed"
             },
-            "line": 34,
-            "name": "I click on CheckOut",
+            "line": 40,
+            "name": "I change item quantity to \"10\"",
             "match": {
-              "location": "BoxShop_Steps.i_click_on_CheckOut()"
+              "arguments": [
+                {
+                  "val": "10",
+                  "offset": 27
+                }
+              ],
+              "location": "BoxShop_Steps.i_change_item_quantity_to(String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 29079,
+              "duration": 147199557,
               "status": "passed"
             },
-            "line": 35,
-            "name": "I Checkout button should\u0027nt be available.",
+            "line": 41,
+            "name": "I click on  ADD TO CART",
             "match": {
-              "location": "BoxShop_Steps.i_Checkout_button_should_nt_be_available()"
+              "location": "BoxShop_Steps.i_click_on_ADD_TO_CART()"
             },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 84625077,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "I click on CheckOut",
+            "match": {
+              "location": "BoxShop_Steps.i_click_on_CheckOut()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 43,
+            "name": "I should be directed to DetailsPage",
+            "match": {},
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "line": 31,
-            "name": "@Atleastoneitem"
+            "line": 37,
+            "name": "@DirectedtoDetailPage"
           }
         ]
       }

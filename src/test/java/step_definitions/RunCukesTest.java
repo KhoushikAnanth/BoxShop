@@ -12,6 +12,6 @@ format = { "pretty",
         "json:target/cucumber.json" }, 
 
        // tags = {"@quantity","@addcart"})
-        tags = {"@Atleastoneitem"})
+        tags = {"@DirectedtoDetailPage"})
 public class RunCukesTest {
 }

@@ -7,61 +7,88 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 14872440316,
+  "duration": 15410718257,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 32,
-  "name": "I should only be able to checkout only when at least one item in cart.",
+  "line": 38,
+  "name": "When I add all the products to cart i should be directed to Details page",
   "description": "",
-  "id": "box-shop-cart--tests;i-should-only-be-able-to-checkout-only-when-at-least-one-item-in-cart.",
+  "id": "box-shop-cart--tests;when-i-add-all-the-products-to-cart-i-should-be-directed-to-details-page",
   "type": "scenario",
   "keyword": "Scenario",
   "tags": [
     {
-      "line": 31,
-      "name": "@Atleastoneitem"
+      "line": 37,
+      "name": "@DirectedtoDetailPage"
     }
   ]
 });
 formatter.step({
-  "line": 33,
+  "line": 39,
   "name": "I am on the Box Shop page",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 34,
-  "name": "I click on CheckOut",
+  "line": 40,
+  "name": "I change item quantity to \"10\"",
   "keyword": "When "
 });
 formatter.step({
-  "line": 35,
-  "name": "I Checkout button should\u0027nt be available.",
+  "line": 41,
+  "name": "I click on  ADD TO CART",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 42,
+  "name": "I click on CheckOut",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 43,
+  "name": "I should be directed to DetailsPage",
   "keyword": "Then "
 });
 formatter.match({
   "location": "BoxShop_Steps.i_am_on_the_Box_Shop_page()"
 });
 formatter.result({
-  "duration": 262234082,
+  "duration": 308521350,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "10",
+      "offset": 27
+    }
+  ],
+  "location": "BoxShop_Steps.i_change_item_quantity_to(String)"
+});
+formatter.result({
+  "duration": 220133650,
+  "status": "passed"
+});
+formatter.match({
+  "location": "BoxShop_Steps.i_click_on_ADD_TO_CART()"
+});
+formatter.result({
+  "duration": 147199557,
   "status": "passed"
 });
 formatter.match({
   "location": "BoxShop_Steps.i_click_on_CheckOut()"
 });
 formatter.result({
-  "duration": 121736428,
+  "duration": 84625077,
   "status": "passed"
 });
-formatter.match({
-  "location": "BoxShop_Steps.i_Checkout_button_should_nt_be_available()"
-});
+formatter.match({});
 formatter.result({
-  "duration": 29079,
-  "status": "passed"
+  "status": "undefined"
 });
 formatter.after({
-  "duration": 128860,
+  "duration": 131712,
   "status": "passed"
 });
 });
