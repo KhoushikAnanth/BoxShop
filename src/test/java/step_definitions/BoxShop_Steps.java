@@ -34,6 +34,21 @@ public class BoxShop_Steps {
 		String actualQuantity = BoxShop_PO.getQuantity();
 		Assert.assertEquals("Comparing expected vs actual quantity:  ", actualQuantity, expectedQuantity);
 	}
+	
+	@When("^I should be able to shop multiple products$")
+	public void i_should_be_able_to_shop_multiple_products() throws Throwable {
+		PageFactory.initElements(driver, BoxShop_PO.class);
+	    BoxShop_PO.clickAddToCart();
+	    BoxShop_PO.addanotheritem();
+	}
+	
+	@Then("^I should see all in Cart$")
+	public void i_should_see_all_in_Cart() throws Throwable {
+		PageFactory.initElements(driver, BoxShop_PO.class);
+		int itemQuantity = Integer.parseInt(BoxShop_PO.getItemsInCart());
+		Assert.assertTrue(itemQuantity > 1); 
+	}
+	
 	@Then("^I should see not valid entry dialouge box$")
 	public void i_should_see_not_valid_entry_dialouge_box() throws Throwable {
 		PageFactory.initElements(driver, BoxShop_PO.class);
@@ -83,6 +98,8 @@ public class BoxShop_Steps {
 	}
 	@When("^I click on CheckOut$")
 	public void i_click_on_CheckOut() throws Throwable {
+		PageFactory.initElements(driver, BoxShop_PO.class);
+	    BoxShop_PO.clickCheckout();
 	}
 
 	@Then("^I Checkout button should'nt be available\\.$")

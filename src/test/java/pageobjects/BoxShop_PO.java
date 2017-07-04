@@ -65,7 +65,7 @@ return boxittab.isDisplayed();
 	}
 	public static String getQuantity(){
 		(new WebDriverWait(driver, 30))
-		  .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[class='ui-button-text']")));
+		  .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@class='main-shop-input quantity'][1]")));
 	return driver.findElement(By.xpath("//input[@class='main-shop-input quantity'][1]")).getAttribute("value");
 	}
 	
@@ -92,22 +92,25 @@ return boxittab.isDisplayed();
 	}
 	
 	public static void addanotheritem(){
-	WebElement element = driver.findElement(By.xpath("//a[@class='btn main-shop-submit'][1]"));
-	JavascriptExecutor executor = (JavascriptExecutor)driver;
-	executor.executeScript("arguments[0].click();", element);
-	
-	}
-	public static void clickRemove(){
 		WebElement element = driver.findElement(By.xpath("//a[@class='btn main-shop-submit'][1]"));
 		JavascriptExecutor executor = (JavascriptExecutor)driver;
 		executor.executeScript("arguments[0].click();", element);
+	
+	}
+	public static void clickRemove() throws InterruptedException{
+		(new WebDriverWait(driver, 30))
+		  .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[@class='remove-item']")));
+		WebElement element = driver.findElement(By.xpath("//a[@class='remove-item']"));
+		JavascriptExecutor executor = (JavascriptExecutor)driver;
+		executor.executeScript("arguments[0].click();", element);
+		
 	}
 	
 	/**
 	 * Click Checkout button
 	 */
 	public static void clickCheckout(){
-		WebElement element = driver.findElement(By.xpath("//a[@class='btn main-shop-submit'][1]"));
+		WebElement element = driver.findElement(By.xpath("//a[@class='btn btn-block btn-lg action-checkout'][1]"));
 		JavascriptExecutor executor = (JavascriptExecutor)driver;
 		//click on checkout button on cart page
 		executor.executeScript("arguments[0].click();", element);

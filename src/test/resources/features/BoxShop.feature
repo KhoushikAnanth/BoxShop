@@ -20,12 +20,12 @@ Feature: Box shop cart  tests
     When I should be able to shop multiple products
     Then I should see all in Cart
     
-  
-    
+      
   @RemoveItem
   	Scenario: I want to be able to remove a product from my cart.
   	Given I am on the Box Shop page
-  	When I click on remove item
+  	When I click on  ADD TO CART
+  	And I click on remove item
   	Then I should see the item been removed from cart
   
   @Atleastoneitem
@@ -39,7 +39,7 @@ Feature: Box shop cart  tests
   	Given I am on the Box Shop page
   	When I change item quantity to "10"
   	And I click on  ADD TO CART
-  	When I click on CheckOut
+  	And I click on CheckOut
   	Then I should be directed to DetailsPage  
   	
   	
