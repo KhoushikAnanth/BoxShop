@@ -2,6 +2,7 @@ package step_definitions;
 
 
 import java.net.MalformedURLException;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -40,7 +41,7 @@ public class Hooks{
             	/*driver = new ChromeDriver();
             	driver.manage().window().setSize(new Dimension(360,640)); */
         		// end - Samsung chrome browser
-            	
+            	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
             	driver.manage().deleteAllCookies();
             	
         } finally{

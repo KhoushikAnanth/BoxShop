@@ -37,8 +37,8 @@ Feature: Box shop cart  tests
   @DirectedtoDetailPage
   	Scenario: When I add all the products to cart i should be directed to Details page
   	Given I am on the Box Shop page
-  	When I change item quantity to "10"
-  	And I click on  ADD TO CART
+  	When I change item quantity to "2"
+  	When I click on  ADD TO CART
   	And I click on CheckOut
   	Then I should be directed to DetailsPage  
   	

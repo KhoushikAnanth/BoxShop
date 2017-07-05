@@ -9,9 +9,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(strict = false, features = "classpath:features", 
 format = { "pretty",
         "html:target/site/cucumber-pretty",
-        "json:target/cucumber.json" }, 
-
-       // tags = {"@quantity","@addcart"})
-        tags = {"@DirectedtoDetailPage"})
+        "json:target/cucumber.json" },
+        tags = {})
 public class RunCukesTest {
 }

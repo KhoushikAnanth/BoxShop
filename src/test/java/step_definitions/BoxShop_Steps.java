@@ -84,8 +84,6 @@ public class BoxShop_Steps {
 	public void i_should_see_TotalPrice_reflecting_accordingly() throws Throwable {
 		PageFactory.initElements(driver, BoxShop_PO.class);
 	    Assert.assertTrue(BoxShop_PO.validateTotalprice());
-	    // Write code here that turns the phrase above into concrete actions
-	    //throw new PendingException();
 	}
 	@When("^I click on remove item$")
 	public void i_click_on_remove_item() throws Throwable {
